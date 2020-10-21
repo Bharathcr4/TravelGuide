@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">TravelGuide</string>
+    <string name="logo_name">Get A Way here</string>
+    <string name="slogo_name">We will help you to find your way!</string>
+    <string name="s1logo_name">Find Your Way Here</string>
+    //Strings for onboarding screen
+    //Titles
+    <string name="first_slide_title">Search Your Location</string>
+    <string name="second_slide_title">Make a Call</string>
+    <string name="third_slide_title">Add Missing Place</string>
+    <string name="fourth_slide_title">Sit Back and Enjoy</string>
+
+    //Description
+    <string name="first_slide_desc">You can search any place nearby or with-in the specified city.We will display specific or all related shops to match your search</string>
+    <string name="second_slide_desc">We provide numbers of almost  all the departments and shops registered with us.You can perform Bookings as well</string>
+    <string name="third_slide_desc"> You can search any place nearby or with in the specified city.We will display specific or all related shops to match your search</string>
+    <string name="fourth_slide_desc">We will handle everything for you.As you have the app in your pocket then you dont have to worry for anything</string>
+
+    //Buttons
+    <string name="skip_btn">Skip</string>
+
+    <string name="next_btn">Next</string>
+
+    <string name="let_get_started">Lets Get Started</string>
+
+</resources>
