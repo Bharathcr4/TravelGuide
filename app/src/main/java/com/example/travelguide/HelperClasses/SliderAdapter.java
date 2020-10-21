@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -18,6 +19,7 @@ public class SliderAdapter extends PagerAdapter {
     LayoutInflater layoutInflater;
 
     public SliderAdapter(Context context) {
+
         this.context = context;
     }
 
@@ -50,7 +52,7 @@ public class SliderAdapter extends PagerAdapter {
 
     @Override
     public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
-        return view == (ConstraintLayout) object;
+        return view == (RelativeLayout) object;
     }
 
     @NonNull
@@ -75,7 +77,7 @@ public class SliderAdapter extends PagerAdapter {
 
     @Override
     public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
-        container.removeView((ConstraintLayout) object);
+        container.removeView((RelativeLayout) object);
     }
 }
 
