@@ -5,29 +5,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Common.SplashScreen"
-    android:background="@color/DarkCyan">
+    android:background="@color/home_background">
 
     <ImageView
         android:id="@+id/background_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:src="@drawable/splash_screen_background"
-        tools:layout_editor_absoluteX="-64dp"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:layout_editor_absoluteX="-63dp"
+        tools:layout_editor_absoluteY="0dp" />
 
     <TextView
         android:id="@+id/simpletext"
-        android:layout_width="207dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="110dp"
-        android:layout_marginLeft="110dp"
-        android:layout_marginEnd="111dp"
-        android:layout_marginRight="111dp"
+        android:layout_width="227dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginLeft="130dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginBottom="28dp"
+        android:fontFamily="@font/alike_angular"
+        android:gravity="center"
         android:text="@string/s1logo_name"
-        android:textColor="@color/black"
+        android:textColor="@android:color/primary_text_light"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/background_image"
-        app:layout_constraintStart_toStartOf="@+id/background_image"
-        tools:layout_editor_absoluteY="696dp" />
+        app:layout_constraintHorizontal_bias="0.812"
+        app:layout_constraintStart_toStartOf="@+id/background_image" />
 </androidx.constraintlayout.widget.ConstraintLayout>

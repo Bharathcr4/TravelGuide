@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#D2B48C"
     android:gravity="center">
 
     <ImageView
@@ -26,7 +27,7 @@
         android:layout_marginTop="335dp"
         android:layout_marginBottom="200dp"
         android:text="TextView"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:textStyle="bold" />
 
     <TextView
@@ -37,5 +38,5 @@
         android:layout_marginTop="400dp"
         android:layout_marginBottom="100dp"
         android:text="@string/first_slide_desc"
-        android:textSize="14sp" />
+        android:textSize="13sp" />
 </RelativeLayout>

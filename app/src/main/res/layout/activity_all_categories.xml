@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/home_background"
+    tools:context=".User.AllCategories">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+
+
+            <ImageView
+                android:id="@+id/back_pressed"
+                android:layout_width="87dp"
+                android:layout_height="match_parent"
+                android:padding="15dp"
+                android:src="@drawable/category_backbuttn" />
+
+            <ImageView
+                android:layout_width="87dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="1dp"
+                android:padding="15dp"
+                android:src="@drawable/search_icon" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/crimson_text"
+            android:text="Categories"
+            android:textStyle="bold"
+            android:textColor="@color/grey"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:textAllCaps="true"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="190dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/categories_car_background"
+                android:layout_margin="20dp">
+
+               <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/car_rent"
+                    android:textSize="30sp"
+                    android:fontFamily="@font/wendy_one"
+                    android:padding="25dp"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/expand_all"
+                    android:background="#00000000"
+                    android:textColor="@color/black"
+                    android:padding="20dp"
+                    android:layout_alignParentBottom="true"/>
+
+
+
+
+            </RelativeLayout>
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/categories_rent_car_icon"
+                android:layout_marginTop="-40dp"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#00000000"
+            android:elevation="8dp"
+            android:layout_margin="20dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/categories_restaurant_background">
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/categories_restaurant_icon"
+                    android:layout_marginLeft="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/restaurant"
+                    android:textSize="30sp"
+                    android:fontFamily="@font/wendy_one"
+                    android:textColor="@color/IndianRed"
+                    android:layout_alignParentRight="true"
+                    android:padding="25dp"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/expand_all"
+                    android:background="#00000000"
+                    android:textColor="@color/IndianRed"
+                    android:layout_alignParentRight="true"
+                    android:padding="20dp"
+                    android:layout_alignParentBottom="true"/>
+
+
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="190dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/categories_hospital_icon"
+                android:layout_margin="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hospital"
+                    android:textSize="30sp"
+                    android:textColor="@color/LightWhite"
+                    android:fontFamily="@font/wendy_one"
+                    android:padding="25dp"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/expand_all"
+                    android:background="#00000000"
+                    android:textColor="@color/LightWhite"
+                    android:padding="20dp"
+                    android:layout_alignParentBottom="true"/>
+
+
+
+
+            </RelativeLayout>
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/hospital_icon"
+                android:layout_marginTop="-10dp"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#00000000"
+            android:elevation="8dp"
+            android:layout_margin="20dp">
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/categories_shop_background">
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/categories_shop_icon"
+                    android:layout_marginLeft="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/shop"
+                    android:textSize="30sp"
+                    android:fontFamily="@font/wendy_one"
+                    android:textColor="@color/Marron"
+                    android:layout_alignParentRight="true"
+                    android:padding="25dp"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/expand_all"
+                    android:background="#00000000"
+                    android:textColor="@color/Marron"
+                    android:layout_alignParentRight="true"
+                    android:padding="20dp"
+                    android:layout_alignParentBottom="true"/>
+
+
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>

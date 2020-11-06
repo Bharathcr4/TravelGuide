@@ -2,8 +2,19 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/adamina</item>
+        <item>@font/alegreya_sans_sc_thin</item>
+        <item>@font/alike_angular</item>
         <item>@font/amaranth</item>
         <item>@font/archivo_black</item>
         <item>@font/corben</item>
+        <item>@font/crimson_text</item>
+        <item>@font/crimson_text_bold</item>
+        <item>@font/crimson_text_bold_italic</item>
+        <item>@font/muli_black</item>
+        <item>@font/muli_light</item>
+        <item>@font/muli_semibold</item>
+        <item>@font/shojumaru</item>
+        <item>@font/sonsie_one</item>
+        <item>@font/wendy_one</item>
     </array>
 </resources>

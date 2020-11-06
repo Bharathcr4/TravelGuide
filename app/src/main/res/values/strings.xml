@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">TravelGuide</string>
-    <string name="logo_name">Get A Way here</string>
-    <string name="slogo_name">We will help you to find your way!</string>
-    <string name="s1logo_name">Find Your Way Here</string>
+    <string name="logo_name">Get A Way </string>
+    <string name="slogo_name">Everything Your City Holds is Here</string>
+    <string name="s1logo_name"> Welcome to Travel Guide</string>
     //Strings for onboarding screen
     //Titles
     <string name="first_slide_title">Search Your Location</string>
@@ -22,5 +22,49 @@
     <string name="next_btn">Next</string>
 
     <string name="let_get_started">Lets Get Started</string>
+    <string name="home">HOME</string>
+    <string name="search">SEARCH</string>
+    <string name="all_categories">ALL CATEGORIES</string>
+
+
+    <string name="login">LOGIN</string>
+    <string name="profile">PROFILE</string>
+    <string name="logout">LOGOUT</string>
+    <string name="share">SHARE</string>
+    <string name="rate_us">RATE_US</string>
+
+    ///Dashboard
+    <string name="hotels">Hotels</string>
+    <string name="restaurants">Restaurants</string>
+    <string name="shops">Shops</string>
+    <string name="banks">Banks</string>
+    <string name="education">Education</string>
+
+    //Titles and desc of Dahsboard
+    <string name="featured_locations">All Featured Locations</string>
+    <string name="featured_locations_description">All the locations that are featured and have the top demand in town!</string>
+    <string name="most_viewed_locations">Most Viewed</string>
+    <string name="categories">Categories</string>
+    <string name="view_all">View All</string>
+    <string name="search_text">Search...</string>
+
+    <string name="car_rent">Car Rent</string>
+    <string name="restaurant">Restaurant</string>
+    <string name="hospital">Hospitals</string>
+    <string name="shop">Shops</string>
+    <string name="expand_all">EXPAND ALL</string>
+
+    <string name="username">Enter Username</string>
+    <string name="password">Enter Password</string>
+    <string name="remember">Remember Me</string>
+
+
+    <string name="sign_up">Sign Up</string>
+    <string name="retailer_heading">Grow <br>Your Business</br></string>
+    <string name="retailer_tag_line">We will help you to grow your business using online services!</string>
+    <string name="create_account">Create <br> Account</br></string>
+    <string name="how_we_work">How we work?</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="forgot_password">Forgot Password</string>
 
 </resources>
