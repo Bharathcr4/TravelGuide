@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/home_background"
+    android:background="@color/LightWhite"
     tools:context=".User.AllCategories">
 
     <LinearLayout
@@ -41,7 +41,7 @@
             android:fontFamily="@font/crimson_text"
             android:text="Categories"
             android:textStyle="bold"
-            android:textColor="@color/grey"
+            android:textColor="@color/black"
             android:textSize="20sp"
             android:padding="10dp"
             android:textAllCaps="true"/>

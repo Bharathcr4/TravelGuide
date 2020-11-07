@@ -36,14 +36,12 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_centerVertical="true"
-                android:background="@color/LightWhite"
                 android:src="@drawable/menu_iconn" />
 
             <ImageView
                 android:id="@+id/login_signup"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:background="@color/LightWhite"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:onClick="callRetailerScreens"

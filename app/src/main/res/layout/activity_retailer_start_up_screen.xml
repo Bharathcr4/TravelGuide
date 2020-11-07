@@ -55,7 +55,6 @@
                 android:layout_margin="5dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:onClick="callLoginScreen"
                 android:background="@color/colorPrimary"
                 android:text="@string/login"
                 android:textColor="@color/black"

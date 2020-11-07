@@ -22,13 +22,13 @@
 
     //Dashboard Colors
 
-    <color name="home_background">#CCCC99</color>
+    <color name="home_background">#ADD8E6</color>
     <color name="banner_background">#f1e9ce</color>
     <color name="banner_background_light">#56f1e9ce</color>
 
     //Card colors
     <color name="card1">#BDB76B</color>
-    <color name="card2">#7adccf</color>
+    <color name="card2">#CD853F</color>
     <color name="card3">#C0C0C0</color>
-    <color name="card4">#b8d7f5</color>
+    <color name="card4">#BC8F8F</color>
 </resources>

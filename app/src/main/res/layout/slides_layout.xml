@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D2B48C"
+    android:background="@color/home_background"
     android:gravity="center">
 
     <ImageView
@@ -23,12 +23,12 @@
         android:id="@+id/slider_heading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="160dp"
+        android:layout_marginLeft="130dp"
         android:layout_marginTop="335dp"
         android:layout_marginBottom="200dp"
         android:text="TextView"
         android:textSize="16sp"
-        android:textStyle="bold" />
+        android:fontFamily="@font/muli_black"/>
 
     <TextView
         android:id="@+id/slider_desc"
