@@ -30,6 +30,7 @@
         android:drawableEnd="@drawable/skip_icon"
         android:padding="10dp"
         android:text="@string/skip_btn"
+        android:fontFamily="@font/wendy_one"
         android:textColor="@color/black"
         android:drawableRight="@drawable/skip_icon" />
 

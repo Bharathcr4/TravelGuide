@@ -14,6 +14,7 @@ import com.example.travelguide.R;
 
 public class RetailerStartUpScreen extends AppCompatActivity {
     private Button loginBtn;
+    private Button signupBtn;
 
 
     @Override
@@ -34,6 +35,26 @@ public class RetailerStartUpScreen extends AppCompatActivity {
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
                 ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(RetailerStartUpScreen.this, pairs);
                startActivity(intent, options.toBundle());
+            }else {
+                startActivity(intent);
+            }
+        });
+
+
+
+
+        signupBtn = findViewById(R.id.signup_btn);
+
+        signupBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplicationContext(), SignUp.class);
+
+
+            Pair[] pairs = new Pair[1];
+            pairs[0] = new Pair<View, String>(signupBtn, "transition_signup");
+
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(RetailerStartUpScreen.this, pairs);
+                startActivity(intent, options.toBundle());
             }else {
                 startActivity(intent);
             }
