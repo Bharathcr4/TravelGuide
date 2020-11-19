@@ -66,10 +66,19 @@
     <string name="how_we_work">How we work?</string>
     <string name="remember_me">Remember Me</string>
     <string name="forgot_password">Forgot Password</string>
+    <string name="make_selection">Make Selection</string>
+    <string name="make_selection_detail">Select which contact detail should we use to reset your password?</string>
+    <string name="forgot_password_detail">Provide your account email for which you want to reset your password</string>
     <string name="full_name">Full Name</string>
     <string name="user_name">Username</string>
     <string name="email">Email</string>
+    <string name="via_sms">via sms</string>
+    <string name="via_email">via email</string>
+    <string name="new_cred">New Credentials</string>
+    <string name="new_cred_detail">Your Identity has been verified!!<br>Set Your new password</br></string>
     <string name="ph_no">Phone Number</string>
     <string name="password_sign">Password</string>
+    <string name="password_updte">Password Updated</string>
+    <string name="password_updte_success_message">Your Password has been updated</string>
 
 </resources>

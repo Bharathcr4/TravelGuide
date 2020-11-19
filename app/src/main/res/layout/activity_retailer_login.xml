@@ -98,6 +98,8 @@
                     android:textColor="@color/black"/>
 
                 <Button
+                    android:id="@+id/forgt_buttn"
+                    android:transitionName="transition_forgot_buttn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/forgot_password"

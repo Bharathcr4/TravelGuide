@@ -11,10 +11,12 @@ import android.view.WindowManager;
 import android.widget.Button;
 
 import com.example.travelguide.R;
+import com.example.travelguide.User.UserDashboard;
 
 public class RetailerStartUpScreen extends AppCompatActivity {
     private Button loginBtn;
     private Button signupBtn;
+    private Button skipBtn;
 
 
     @Override
@@ -22,6 +24,7 @@ public class RetailerStartUpScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_retailer_start_up_screen);
+
 
         loginBtn = findViewById(R.id.login_btn);
 
@@ -34,13 +37,28 @@ public class RetailerStartUpScreen extends AppCompatActivity {
 
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
                 ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(RetailerStartUpScreen.this, pairs);
-               startActivity(intent, options.toBundle());
-            }else {
+                startActivity(intent, options.toBundle());
+            } else {
                 startActivity(intent);
             }
         });
 
+        skipBtn = findViewById(R.id.skip_btn1);
 
+        skipBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplicationContext(), UserDashboard.class);
+
+
+            Pair[] pairs = new Pair[1];
+            pairs[0] = new Pair<View, String>(skipBtn, "transition_login");
+
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(RetailerStartUpScreen.this, pairs);
+                startActivity(intent, options.toBundle());
+            } else {
+                startActivity(intent);
+            }
+        });
 
 
         signupBtn = findViewById(R.id.signup_btn);
@@ -55,10 +73,10 @@ public class RetailerStartUpScreen extends AppCompatActivity {
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
                 ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(RetailerStartUpScreen.this, pairs);
                 startActivity(intent, options.toBundle());
-            }else {
+            } else {
                 startActivity(intent);
             }
         });
-    }
 
+    }
 }

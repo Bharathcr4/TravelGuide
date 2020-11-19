@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.travelguide.Common.LoginSignup.RetailerStartUpScreen;
 import com.example.travelguide.HelperClasses.SliderAdapter;
 import com.example.travelguide.R;
 import com.example.travelguide.User.UserDashboard;
@@ -44,11 +45,8 @@ public class OnBoarding extends AppCompatActivity {
         addDots(0);
         viewPager.addOnPageChangeListener(changeListener);
     }
-
-
-
     public void skip(View view){
-        startActivity(new Intent(getApplicationContext(), UserDashboard.class));
+        startActivity(new Intent(getApplicationContext(), RetailerStartUpScreen.class));
         finish();
     }
     public void next(View view){
