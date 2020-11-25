@@ -80,5 +80,6 @@
     <string name="password_sign">Password</string>
     <string name="password_updte">Password Updated</string>
     <string name="password_updte_success_message">Your Password has been updated</string>
+    <string name="signup_sucess">SignUp Sucessful</string>
 
 </resources>

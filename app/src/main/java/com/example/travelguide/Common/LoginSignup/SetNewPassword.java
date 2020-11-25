@@ -11,14 +11,18 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.example.travelguide.R;
+import com.google.android.material.textfield.TextInputLayout;
 
 public class SetNewPassword extends AppCompatActivity {
     ImageView backBtn;
     Button ok;
+    TextInputLayout  newpass,confpass;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_set_new_password);
+        newpass= findViewById(R.id.newpasswrd);
+        confpass = findViewById(R.id.confirmpasswrd);
         backBtn = findViewById(R.id.set_new_pass_backbtn);
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,5 +46,7 @@ public class SetNewPassword extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
     }
     }

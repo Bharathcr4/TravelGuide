@@ -123,7 +123,7 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
 
         featuredLocations.add(new FeaturedHelperClass(R.drawable.mcdonald, "Mcdonald's", "Mcdonalds is the best as it has many veg options, food is always tasty even though as anywhere extremely unhealthy."));
         featuredLocations.add(new FeaturedHelperClass(R.drawable.temples, "Famous Temples", "A famous Temple in the city where thousands of people visit"));
-        featuredLocations.add(new FeaturedHelperClass(R.drawable.bakery_img, "Best Bakery in City", "A famous Temple in the city where you get Cakes,Sweets and other food items"));
+        featuredLocations.add(new FeaturedHelperClass(R.drawable.bakery_img, "Best Bakery in City", "A famous Bakery in the city where you get Cakes,Sweets and other food items"));
 
         adapter = new FeaturedAdapter(featuredLocations);
         featuredRecycler.setAdapter(adapter);

@@ -18,6 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.travelguide.R;
+import com.example.travelguide.User.UserDashboard;
 import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.ArrayList;
@@ -46,9 +47,7 @@ public class SignUp extends AppCompatActivity implements AdapterView.OnItemSelec
         password = findViewById(R.id.signup_password);
         phonenumber = findViewById(R.id.signup_phonenumber);
        radiogroup= findViewById(R.id.signup_gender);
-        if(!validateFullName() | !validateUserName() | !validateGender() | !validatePhoneNumber() | !validateEmail() | !validatePassword()){
-            return;
-        }
+
         backBtn = findViewById(R.id.signup_back_button);
         backBtn.setOnClickListener(v ->
 
@@ -66,11 +65,16 @@ public class SignUp extends AppCompatActivity implements AdapterView.OnItemSelec
                 startActivity(intent);
             }
         });
-        signup = findViewById(R.id.signup_next_button);
-        signup.setOnClickListener(v ->
 
-        {
-            Intent intent = new Intent(getApplicationContext(), SignUp.class);
+
+            signup = findViewById(R.id.signup_next_button);
+            signup.setOnClickListener(v ->{
+
+        if(!validateFullName() | !validateUserName() | !validateGender() | !validatePhoneNumber() | !validateEmail() | !validatePassword()) {
+            return;
+        }
+        else {
+            Intent intent = new Intent(getApplicationContext(), UserDashboard.class);
 
             Pair[] pairs = new Pair[1];
             pairs[0] = new Pair<View, String>(signup, "transition_next_btn");
@@ -81,7 +85,12 @@ public class SignUp extends AppCompatActivity implements AdapterView.OnItemSelec
             } else {
                 startActivity(intent);
             }
-        });
+        }
+            });
+
+
+
+
 
         login = findViewById(R.id.signup_login_button);
         login.setOnClickListener(v ->
@@ -209,12 +218,12 @@ public class SignUp extends AppCompatActivity implements AdapterView.OnItemSelec
     private boolean validatePassword() {
         String val = password.getEditText().getText().toString().trim();
         String checkPassword = "^" +
-                //"(?=.*[0-9])" +         //at least 1 digit
-                //"(?=.*[a-z])" +         //at least 1 lower case letter
-                //"(?=.*[A-Z])" +         //at least 1 upper case letter
+                "(?=.*[0-9])" +         //at least 1 digit
+                "(?=.*[a-z])" +         //at least 1 lower case letter
+                "(?=.*[A-Z])" +         //at least 1 upper case letter
                 "(?=.*[a-zA-Z])" +      //any letter
-                //"(?=.*[@#$%^&+=])" +    //at least 1 special character
-                "(?=S+$)" +           //no white spaces
+               "(?=.*[@#$%^&+=])" +    //at least 1 special character
+                "(?=\\S+$)" +           //no white spaces
                 ".{4,}" +               //at least 4 characters
                 "$";
 
@@ -242,12 +251,8 @@ public class SignUp extends AppCompatActivity implements AdapterView.OnItemSelec
 
     private boolean validatePhoneNumber() {
         String val = phonenumber.getEditText().getText().toString().trim();
-        String checkspaces = "Aw{1,20}z";
         if (val.isEmpty()) {
             phonenumber.setError("Enter valid phone number");
-            return false;
-        } else if (!val.matches(checkspaces)) {
-            phonenumber.setError("No White spaces are allowed!");
             return false;
         } else {
            phonenumber.setError(null);
