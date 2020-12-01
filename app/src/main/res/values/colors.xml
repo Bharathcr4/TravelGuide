@@ -26,6 +26,13 @@
     <color name="banner_background">#f1e9ce</color>
     <color name="banner_background_light">#56f1e9ce</color>
 
+
+    <color name="clr_otp_bg">#20B2AA</color>
+    <color name="clr_otp_btn_yellow">#F8CD06</color>
+    <color name="clr_white_text">#FFFFFF</color>
+    <color name="clr_grey_text">#D3D3D3</color>
+    <color name="clr_grey_text_transparent">#696969</color>
+
     //Card colors
     <color name="card1">#BDB76B</color>
     <color name="card2">#CD853F</color>

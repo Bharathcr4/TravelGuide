@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.example.travelguide.OtpActivity_one;
 import com.example.travelguide.R;
 
 public class MakeSelection extends AppCompatActivity {
@@ -33,7 +34,7 @@ public class MakeSelection extends AppCompatActivity {
        sms.setOnClickListener(v ->
 
         {
-            Intent intent = new Intent(getApplicationContext(), SetNewPassword.class);
+            Intent intent = new Intent(getApplicationContext(), OtpActivity_one.class);
 
             Pair[] pairs = new Pair[1];
             pairs[0] = new Pair<View, String>(sms, "transition_sms_btn");

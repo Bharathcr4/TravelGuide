@@ -45,7 +45,7 @@ public class OnBoarding extends AppCompatActivity {
         addDots(0);
         viewPager.addOnPageChangeListener(changeListener);
     }
-    public void skip(View view){
+   public void skip(View view){
         startActivity(new Intent(getApplicationContext(), RetailerStartUpScreen.class));
         finish();
     }
@@ -97,6 +97,7 @@ public class OnBoarding extends AppCompatActivity {
 
             letsGetStarted.setVisibility(View.VISIBLE);
         }
+
     }
 
             @Override
