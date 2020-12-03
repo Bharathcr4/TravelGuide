@@ -1,7 +1,6 @@
 package com.example.travelguide.Common.LoginSignup;
 
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatSpinner;
@@ -17,121 +16,102 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.travelguide.Databases.Signup_database;
 import com.example.travelguide.R;
-import com.example.travelguide.User.UserDashboard;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 
 public class SignUp extends AppCompatActivity {
-//        implements AdapterView.OnItemSelectedListener {
-//    private AppCompatSpinner spinner;
+    //    private AppCompatSpinner spinner;
+    private static final String TAG = SignUp.class.getSimpleName();
 
-    private ImageView regbackBtn;
-    private Button regsignup, reglogin;
 
-    private TextInputLayout regfullname, regusername, regemail, regpassword, regphonenumber;
-    FirebaseDatabase firebaseDatabase;
-    DatabaseReference databaseReference;
-    private FirebaseAuth firebaseAuth;
+    private ImageView bk_btn;
+    private Button login;
+    private Button sign_up;
+    private TextInputLayout full_name;
+    private TextInputLayout user_name;
+    private TextInputLayout user_email;
+    private TextInputLayout user_password;
+    private TextInputLayout user_phone;
+    private DatabaseReference mFirebaseDatabase;
+    private FirebaseDatabase mFirebaseInstance;
+    private String id;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_retailer_sign_up);
-        setupUIViews();
 
-        databaseReference = FirebaseDatabase.getInstance().getReference("Signup_database");
-        firebaseAuth = FirebaseAuth.getInstance();
-        regsignup.setOnClickListener(new View.OnClickListener() {
+        full_name=(TextInputLayout) findViewById(R.id.signup_fullname);
+        user_name=(TextInputLayout) findViewById(R.id.signup_username);
+        user_email=(TextInputLayout) findViewById(R.id.signup_email);
+        user_password=(TextInputLayout) findViewById(R.id.signup_password);
+        user_phone=(TextInputLayout) findViewById(R.id.signup_phonenumber);
+
+        sign_up=(Button)findViewById(R.id.signup_button);
+
+        mFirebaseInstance=FirebaseDatabase.getInstance();
+
+        mFirebaseDatabase=mFirebaseInstance.getReference("user");
+
+        sign_up.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (validate()) {
-                    String email = regemail.getEditText().getText().toString();
-                    String password = regpassword.getEditText().getText().toString();
-                    firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-                            if (task.isSuccessful()) {
-
-                                storedata();
-//                                Toast.makeText(SignUp.this, "Registration Successful", Toast.LENGTH_SHORT).show();
-//                                startActivity(new Intent(SignUp.this, UserDashboard.class));
-                            } else {
-                                Toast.makeText(SignUp.this, "Registration Failed", Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                    });
-
+                String full_name1=full_name.getEditText().getText().toString();
+                String user_name1=user_name.getEditText().getText().toString();
+                String user_email1=user_email.getEditText().getText().toString();
+                String user_password1=user_password.getEditText().getText().toString();
+                String user_phone1=user_phone.getEditText().getText().toString();
+                if(TextUtils.isEmpty((id))){
+                    createUser(full_name1,user_name1,user_email1,user_password1,user_phone1);
+                }else{
+                    updateUser(full_name1,user_name1,user_email1,user_password1,user_phone1);
                 }
             }
         });
-        reglogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(SignUp.this, Login.class));
-            }
-        });
+        toggleButton();
     }
-
-    private void storedata() {
-        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-        DatabaseReference reference = firebaseDatabase.getReference("Users");
-
-        //Create helperclass reference and store data using firebase
-        Signup_database information = new Signup_database(regfullname,regusername,regpassword,regemail,regphonenumber);
-        reference.child(String.valueOf(regphonenumber)).setValue(information);
-
-        //We will also create a Session here in next videos to keep the user logged In
-        Toast.makeText(SignUp.this, "Registration Successful", Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(SignUp.this, UserDashboard.class));
-        finish();
-
-    }
-
-    private void setupUIViews() {
-        regfullname = findViewById(R.id.signup_fullname);
-        regusername = findViewById(R.id.signup_username);
-        regemail = findViewById(R.id.signup_email);
-        regpassword = findViewById(R.id.signup_password);
-        regphonenumber = findViewById(R.id.signup_phonenumber);
-        regsignup = findViewById(R.id.signup_next_button);
-        regbackBtn = findViewById(R.id.signup_back_button);
-        reglogin = findViewById(R.id.signup_login_button);
-
-
-    }
-
-    private Boolean validate() {
-        Boolean result = false;
-        String fullName = regfullname.getEditText().getText().toString();
-        String username = regusername.getEditText().getText().toString();
-        String email = regemail.getEditText().getText().toString();
-        String password = regpassword.getEditText().getText().toString();
-        String phoneNumber = regphonenumber.getEditText().getText().toString();
-
-
-
-        if (fullName.isEmpty() || username.isEmpty() || password.isEmpty() || phoneNumber.isEmpty() || email.isEmpty()) {
-            Toast.makeText(this, "Please enter all the details", Toast.LENGTH_SHORT);
-        } else {
-            result = true;
-
+    private void toggleButton(){
+        if(TextUtils.isEmpty(id)){
+            sign_up.setText("save");
+        }else{
+            sign_up.setText("update");
         }
-        return result;
+    }
+    private void updateUser(String full_name,String user_name,String user_email,String user_password,String user_phone){
+        if(!TextUtils.isEmpty(full_name))
+            mFirebaseDatabase.child(id).child("full_name").setValue(full_name);
+
+        if(!TextUtils.isEmpty(user_name))
+            mFirebaseDatabase.child(id).child("user_name").setValue(user_name);
+
+
+        if(!TextUtils.isEmpty(user_email))
+            mFirebaseDatabase.child(id).child("user_email").setValue(user_email);
+
+        if(!TextUtils.isEmpty(user_password))
+            mFirebaseDatabase.child(id).child("user_password").setValue(user_password);
+
+
+        if(!TextUtils.isEmpty(user_phone))
+            mFirebaseDatabase.child(id).child("user_phone").setValue(user_phone);
+    }
+
+    private void createUser(String full_name,String user_name,String user_email,String user_password,String user_phone){
+        if(TextUtils.isEmpty(id)){
+            id=mFirebaseDatabase.push().getKey();
+        }
+        user user = new user(full_name,user_name,user_email,user_password,user_phone);
+        mFirebaseDatabase.child(id).setValue(user);
     }
 }
-
-

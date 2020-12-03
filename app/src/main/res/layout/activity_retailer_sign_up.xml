@@ -55,6 +55,7 @@
                 app:boxStrokeColor="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
+
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:inputType="text">
@@ -80,6 +81,7 @@
                 app:boxStrokeColor="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
+
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:inputType="text">
@@ -136,13 +138,13 @@
                 app:boxStrokeColor="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
+
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:inputType="textEmailAddress">
 
                 </com.google.android.material.textfield.TextInputEditText>
             </com.google.android.material.textfield.TextInputLayout>
-
 
 
             <com.google.android.material.textfield.TextInputLayout
@@ -161,6 +163,7 @@
                 app:boxStrokeColor="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
+
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:inputType="textPassword">
@@ -172,7 +175,7 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/signup_next_button"
+            android:id="@+id/signup_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/sign_up"
