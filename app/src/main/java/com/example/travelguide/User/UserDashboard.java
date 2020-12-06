@@ -16,6 +16,7 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.example.travelguide.Common.LoginSignup.Login;
 import com.example.travelguide.Common.LoginSignup.RetailerStartUpScreen;
 import com.example.travelguide.HelperClasses.HomeAdapter.FeaturedAdapter;
 import com.example.travelguide.HelperClasses.HomeAdapter.FeaturedHelperClass;
@@ -109,11 +110,22 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
             case R.id.nav_all_categories:
                 startActivity(new Intent(getApplicationContext(),AllCategories.class));
                 break;
+            case R.id.nav_login:
+                startActivity(new Intent(getApplicationContext(), Login.class));
+                break;
+            case R.id.nav_home:
+                startActivity(new Intent(getApplicationContext(), UserDashboard.class));
+                break;
+
+            case R.id.nav_profile:
+                startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+                break;
         }
 
 
         return true;
     }
+
 
     private void featuredRecycler() {
         featuredRecycler.setHasFixedSize(true);

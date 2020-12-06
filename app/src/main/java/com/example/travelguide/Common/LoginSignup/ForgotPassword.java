@@ -1,5 +1,6 @@
 package com.example.travelguide.Common.LoginSignup;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ActivityOptions;
@@ -9,14 +10,20 @@ import android.util.Pair;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.travelguide.R;
+import com.example.travelguide.User.UserDashboard;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class ForgotPassword extends AppCompatActivity {
     ImageView backBtn;
-    Button next;
+    Button forgot_button;
     TextInputLayout email;
+    FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,48 +31,37 @@ public class ForgotPassword extends AppCompatActivity {
         setContentView(R.layout.activity_forgot_password);
         email = findViewById(R.id.forgotpassword_email);
         backBtn = findViewById(R.id.forgot_backbuttn);
+        forgot_button = findViewById(R.id.forgot_next1);
+        firebaseAuth = FirebaseAuth.getInstance();
+
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 ForgotPassword.super.onBackPressed();
             }
         });
-        next = findViewById(R.id.forgot_next1);
-        next.setOnClickListener(v -> {
-            if (!validateEmail()) {
-                return;
-            } else {
 
-                Intent intent = new Intent(getApplicationContext(), MakeSelection.class);
+        forgot_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                firebaseAuth.sendPasswordResetEmail(email.getEditText().getText().toString()).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    Intent intent = new Intent(getApplicationContext(), Login.class);
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
 
-                Pair[] pairs = new Pair[1];
-                pairs[0] = new Pair<View, String>(next, "transition_forgot_next1");
+                        if (task.isSuccessful()) {
+                            Toast.makeText(ForgotPassword.this, "Password Sent to your email", Toast.LENGTH_LONG).show();
+                            startActivity(intent);
+                        } else {
+                            Toast.makeText(ForgotPassword.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
 
-                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-                    ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(ForgotPassword.this, pairs);
-                    startActivity(intent, options.toBundle());
-                } else {
-                    startActivity(intent);
-                }
+                        }
+
+                    }
+                });
             }
         });
+
+
     }
-
-
-        private boolean validateEmail () {
-            String val = email.getEditText().getText().toString().trim();
-            String checkEmail = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
-            if (val.isEmpty()) {
-                email.setError("Field cannot be empty");
-                return false;
-            } else if (!val.matches(checkEmail)) {
-                email.setError("Invalid Email!!");
-                return false;
-            } else {
-                email.setError(null);
-                email.setErrorEnabled(false);
-                return true;
-
-            }
-        }
-    }
+}

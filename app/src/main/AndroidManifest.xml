@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.travelguide">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
-        android:icon="@drawable/a_iconn"
+        android:icon="@drawable/a_icon"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.TravelGuide">
-        <activity android:name=".OtpActivity_one" />
-        <activity android:name=".Common.LoginSignup.ForgotpasswordSucessMessage" />
-        <activity android:name=".Common.LoginSignup.SetNewPassword" />
-        <activity android:name=".Common.LoginSignup.MakeSelection" />
+        android:theme="@style/Theme.TravelGuide"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".User.ProfileActivity"></activity>
         <activity android:name=".Common.LoginSignup.ForgotPassword" />
         <activity android:name=".Common.LoginSignup.SignUp" />
         <activity android:name=".Common.LoginSignup.Login" />
