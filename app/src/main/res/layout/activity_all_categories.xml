@@ -65,6 +65,7 @@
                     android:padding="25dp"/>
 
                 <Button
+                    android:id="@+id/car_rental"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/expand_all"
@@ -112,7 +113,7 @@
                     android:fontFamily="@font/wendy_one"
                     android:textColor="@color/IndianRed"
                     android:layout_alignParentRight="true"
-                    android:padding="25dp"/>
+                    android:padding="22dp"/>
 
                 <Button
                     android:layout_width="wrap_content"

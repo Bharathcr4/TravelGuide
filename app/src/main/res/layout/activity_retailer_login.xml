@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Common.LoginSignup.Login"
-    android:background="@drawable/bg2"
+    android:background="@drawable/logbg1"
     android:padding="30dp"
     android:transitionName="transition_login">
 
@@ -89,15 +89,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp">
 
-
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.AppCompat.CompoundButton.CheckBox"
-                    android:text="@string/remember"
-                    android:buttonTint="@color/black"
-                    android:layout_centerVertical="true"
-                    android:textColor="@color/black"/>
 
                 <Button
                     android:id="@+id/forgt_buttn"

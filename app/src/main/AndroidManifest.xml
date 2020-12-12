@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TravelGuide"
         android:usesCleartextTraffic="true">
-        <activity android:name=".User.ProfileActivity"></activity>
+        <activity android:name=".User.Car_rent_main"></activity>
+        <activity android:name=".User.ProfileActivity" />
         <activity android:name=".Common.LoginSignup.ForgotPassword" />
         <activity android:name=".Common.LoginSignup.SignUp" />
         <activity android:name=".Common.LoginSignup.Login" />

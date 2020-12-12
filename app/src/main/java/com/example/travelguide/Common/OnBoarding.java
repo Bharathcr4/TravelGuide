@@ -3,9 +3,11 @@ package com.example.travelguide.Common;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
+import android.util.Pair;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
@@ -14,6 +16,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.travelguide.Common.LoginSignup.ForgotPassword;
+import com.example.travelguide.Common.LoginSignup.Login;
 import com.example.travelguide.Common.LoginSignup.RetailerStartUpScreen;
 import com.example.travelguide.HelperClasses.SliderAdapter;
 import com.example.travelguide.R;
@@ -39,16 +43,21 @@ public class OnBoarding extends AppCompatActivity {
         dotsLayout = findViewById(R.id.dots);
         letsGetStarted = findViewById(R.id.get_started_btn);
 
+        letsGetStarted.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), RetailerStartUpScreen.class);
+                startActivity(intent);
+            }
+        });
+
         //Call Adapter
         sliderAdapter = new SliderAdapter(this);
         viewPager.setAdapter(sliderAdapter);
         addDots(0);
         viewPager.addOnPageChangeListener(changeListener);
     }
-   public void skip(View view){
-        startActivity(new Intent(getApplicationContext(), RetailerStartUpScreen.class));
-        finish();
-    }
+
     public void next(View view){
         viewPager.setCurrentItem(currentPos + 1);
     }

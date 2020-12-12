@@ -7,10 +7,6 @@
     android:icon="@drawable/menu_icon"/>
 
     <item
-        android:id="@+id/nav_search"
-        android:title="@string/search"
-        android:icon="@drawable/search_icon"/>
-    <item
         android:id="@+id/nav_all_categories"
         android:title="@string/all_categories"
         android:icon="@drawable/menu_category_icon"/>
