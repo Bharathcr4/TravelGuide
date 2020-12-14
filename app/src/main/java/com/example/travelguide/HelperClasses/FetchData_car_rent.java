@@ -1,11 +1,18 @@
 package com.example.travelguide.HelperClasses;
 
-public class FetchData_car_rent {
+import java.io.Serializable;
+import java.util.Locale;
+
+public class FetchData_car_rent implements Serializable {
     String id;
     String Company;
     String Location;
     String Phonenumber;
     String DownloadLink;
+
+    public FetchData_car_rent() {
+
+    }
 
     public FetchData_car_rent(String id, String company, String location, String phonenumber, String downloadLink) {
         this.id = id;
@@ -53,5 +60,15 @@ public class FetchData_car_rent {
 
     public void setDownloadLink(String downloadLink) {
         DownloadLink = downloadLink;
+    }
+
+    @Override
+    public String toString() {
+        return "FetchData_car_rent{" +
+                "Company='" + Company + '\'' +
+                ", DownloadLink='" + DownloadLink + '\'' +
+                ", Location'" + Location + '\'' +
+                ", Phonenumber='" + Phonenumber + '\'' +
+                '}';
     }
 }

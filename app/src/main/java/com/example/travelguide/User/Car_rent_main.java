@@ -6,7 +6,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 
+import com.example.travelguide.Common.LoginSignup.Login;
 import com.example.travelguide.HelperClasses.FetchData_car_rent;
 import com.example.travelguide.HelperClasses.HomeAdapter.HelperAdapter_car_rent;
 import com.example.travelguide.R;
@@ -22,6 +26,7 @@ import java.util.List;
 public class Car_rent_main extends AppCompatActivity {
 List<FetchData_car_rent>fetchData_car_rent;
 RecyclerView recyclerView;
+ImageView car_rent;
 HelperAdapter_car_rent helperAdapter_car_rent;
 DatabaseReference databaseReference;
     @Override
@@ -29,6 +34,7 @@ DatabaseReference databaseReference;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_car_rent_main);
         recyclerView=findViewById(R.id.recycler_car_rent);
+        car_rent=findViewById(R.id.car_rent_back_button);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         fetchData_car_rent=new ArrayList<>();
 
@@ -49,6 +55,12 @@ DatabaseReference databaseReference;
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
+            }
+        });
+        car_rent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Car_rent_main.super.onBackPressed();
             }
         });
     }

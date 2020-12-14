@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/bg1"
-    tools:context=".User.ProfileActivity">
+    tools:context=".Common.LoginSignup.Profile_main">
 
     <ImageView
         android:id="@+id/profile_back_button"

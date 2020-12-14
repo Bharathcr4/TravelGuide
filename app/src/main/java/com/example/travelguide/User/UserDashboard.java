@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
-import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.example.travelguide.Common.LoginSignup.Login;
+import com.example.travelguide.Common.LoginSignup.Profile_main;
 import com.example.travelguide.Common.LoginSignup.RetailerStartUpScreen;
 import com.example.travelguide.HelperClasses.HomeAdapter.FeaturedAdapter;
 import com.example.travelguide.HelperClasses.HomeAdapter.FeaturedHelperClass;
@@ -118,7 +118,7 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
                 break;
 
             case R.id.nav_profile:
-                startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+                startActivity(new Intent(getApplicationContext(), Profile_main.class));
                 break;
         }
 
