@@ -12,7 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TravelGuide"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Common.LoginSignup.Profile_main"></activity>
+        <activity android:name=".User.Tourist_place_main"></activity>
+        <activity android:name=".User.Shopping_main" />
+        <activity android:name=".User.Lodging_main" />
+        <activity android:name=".User.Hospital_main" />
+        <activity android:name=".User.Restaurant_main" />
+        <activity android:name=".Common.LoginSignup.Profile_main" />
         <activity android:name=".User.Profile_main" />
         <activity android:name=".User.Car_rent_main" />
         <activity android:name=".User.ProfileActivity_main" />

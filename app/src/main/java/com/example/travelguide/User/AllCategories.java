@@ -14,7 +14,7 @@ import com.example.travelguide.R;
 
 public class AllCategories extends AppCompatActivity {
 ImageView backBtn;
-Button expandall_car;
+Button expandall_car,expandall_restaurant,expandall_hospital,expandall_shopping;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +25,9 @@ Button expandall_car;
         //Hooks
         backBtn = findViewById(R.id.back_pressed);
         expandall_car=findViewById(R.id.car_rental);
+        expandall_restaurant=findViewById(R.id.restaurant);
+        expandall_hospital=findViewById(R.id.hospital);
+        expandall_shopping=findViewById(R.id.shopping);
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -35,6 +38,27 @@ Button expandall_car;
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), Car_rent_main.class);
+                startActivity(intent);
+            }
+        });
+        expandall_restaurant.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Restaurant_main.class);
+                startActivity(intent);
+            }
+        });
+        expandall_hospital.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Hospital_main.class);
+                startActivity(intent);
+            }
+        });
+        expandall_shopping.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Shopping_main.class);
                 startActivity(intent);
             }
         });

@@ -116,6 +116,7 @@
                     android:padding="22dp"/>
 
                 <Button
+                    android:id="@+id/restaurant"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/expand_all"
@@ -151,6 +152,7 @@
                     android:padding="25dp"/>
 
                 <Button
+                    android:id="@+id/hospital"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/expand_all"
@@ -194,7 +196,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/shop"
+                    android:text="Shopping"
                     android:textSize="30sp"
                     android:fontFamily="@font/wendy_one"
                     android:textColor="@color/Marron"
@@ -202,6 +204,7 @@
                     android:padding="25dp"/>
 
                 <Button
+                    android:id="@+id/shopping"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/expand_all"

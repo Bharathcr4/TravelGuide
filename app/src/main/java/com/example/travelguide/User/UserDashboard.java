@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.example.travelguide.Common.LoginSignup.Login;
 import com.example.travelguide.Common.LoginSignup.Profile_main;
@@ -22,6 +23,7 @@ import com.example.travelguide.HelperClasses.HomeAdapter.FeaturedAdapter;
 import com.example.travelguide.HelperClasses.HomeAdapter.FeaturedHelperClass;
 import com.example.travelguide.R;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 
@@ -31,7 +33,7 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
     static final float END_SCALE = 0.7f;
     RecyclerView featuredRecycler;
     RecyclerView.Adapter adapter;
-    ImageView menuIcon;
+    ImageView menuIcon,dash_restaurant,dash_lodging,dash_shopping,dash_travel;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
 
@@ -44,6 +46,40 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
         setContentView(R.layout.activity_user_dashboard);
         //Hooks
         featuredRecycler = findViewById(R.id.featured_recycler);
+        dash_restaurant=findViewById(R.id.dashboard_rest_icon);
+        dash_shopping=findViewById(R.id.shoppingclick);
+        dash_lodging=findViewById(R.id.lodgingclick);
+        dash_travel=findViewById(R.id.travelclick);
+
+        dash_restaurant.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Restaurant_main.class);
+                startActivity(intent);
+            }
+        });
+        dash_travel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Tourist_place_main.class);
+                startActivity(intent);
+            }
+        });
+        dash_shopping.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Shopping_main.class);
+                startActivity(intent);
+            }
+        });
+
+        dash_lodging.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Lodging_main.class);
+                startActivity(intent);
+            }
+        });
 
         menuIcon = findViewById(R.id.menu_icon);
 
@@ -67,6 +103,7 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
         navigationView.bringToFront();
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.setCheckedItem(R.id.nav_home);
+
 
         menuIcon.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -118,14 +155,29 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
                 break;
 
             case R.id.nav_profile:
-                startActivity(new Intent(getApplicationContext(), Profile_main.class));
+                if (FirebaseAuth.getInstance().getUid() != null){
+                    startActivity(new Intent(getApplicationContext(), Profile_main.class));
+                    //Toast.makeText(this, "Logout successfully..!!", Toast.LENGTH_SHORT).show();
+                }else {
+                    Toast.makeText(this, "Please Login to your account", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(getApplicationContext(), Login.class));
+                }
+                break;
+
+            case R.id.nav_logout:
+                if (FirebaseAuth.getInstance().getUid() != null){
+                    FirebaseAuth.getInstance().signOut();
+                    Toast.makeText(this, "Logout successfully..!!", Toast.LENGTH_SHORT).show();
+                }else {
+                    Toast.makeText(this, "Please Login to your account", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(getApplicationContext(), Login.class));
+                }
                 break;
         }
 
 
         return true;
     }
-
 
     private void featuredRecycler() {
         featuredRecycler.setHasFixedSize(true);

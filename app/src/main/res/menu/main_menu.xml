@@ -37,44 +37,4 @@
 
         </menu>
     </item>
-
-    <item android:title="Categories">
-        <menu>
-            <group
-                android:checkableBehavior="single">
-                <item
-                    android:id="@+id/nav_restaurants"
-                    android:title="@string/restaurants"
-                    android:icon="@drawable/restaurant_icon"/>
-
-                <item
-                    android:id="@+id/nav_education"
-                    android:title="@string/education"
-                    android:icon="@drawable/education_icon"/>
-                <item
-                    android:id="@+id/nav_shop"
-                    android:title="@string/shops"
-                    android:icon="@drawable/shop_icon"/>
-            </group>
-
-        </menu>
-    </item>
-
-    <item android:title="Share">
-        <menu>
-            <group
-                android:checkableBehavior="none">
-                <item
-                    android:id="@+id/nav_share"
-                    android:title="@string/share"
-                    android:icon="@drawable/menu_share"/>
-
-                <item
-                    android:id="@+id/nav_rate_us"
-                    android:title="@string/rate_us"
-                    android:icon="@drawable/menu_rate_us"/>
-            </group>
-
-        </menu>
-    </item>
 </menu>

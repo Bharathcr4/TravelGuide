@@ -30,15 +30,13 @@
     <string name="login">LOGIN</string>
     <string name="profile">PROFILE</string>
     <string name="logout">LOGOUT</string>
-    <string name="share">SHARE</string>
-    <string name="rate_us">RATE_US</string>
 
     ///Dashboard
     <string name="hotels">Hotels</string>
     <string name="restaurants">Restaurants</string>
-    <string name="shops">Shops</string>
+    <string name="shops">Shopping</string>
     <string name="banks">Banks</string>
-    <string name="education">Education</string>
+    <string name="tourist_place">Places</string>
 
     //Titles and desc of Dahsboard
     <string name="featured_locations">All Featured Locations</string>

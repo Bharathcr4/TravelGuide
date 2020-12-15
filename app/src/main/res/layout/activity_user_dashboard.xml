@@ -100,6 +100,7 @@
                             android:elevation="8dp">
 
                             <ImageView
+                                android:id="@+id/dashboard_rest_icon"
                                 android:layout_width="30dp"
                                 android:layout_height="30dp"
                                 android:layout_centerInParent="true"
@@ -129,6 +130,7 @@
                             android:elevation="8dp">
 
                             <ImageView
+                                android:id="@+id/lodgingclick"
                                 android:layout_width="30dp"
                                 android:layout_height="30dp"
                                 android:layout_centerInParent="true"
@@ -139,7 +141,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
-                            android:text="@string/hotels"
+                            android:text="Lodging"
                             android:textAlignment="center" />
 
                     </LinearLayout>
@@ -157,17 +159,18 @@
                             android:elevation="8dp">
 
                             <ImageView
+                                android:id="@+id/travelclick"
                                 android:layout_width="30dp"
                                 android:layout_height="30dp"
                                 android:layout_centerInParent="true"
-                                android:src="@drawable/education_icon" />
+                                android:src="@drawable/travel_icon" />
                         </RelativeLayout>
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
-                            android:text="@string/education"
+                            android:text="@string/tourist_place"
                             android:textAlignment="center" />
 
                     </LinearLayout>
@@ -185,6 +188,7 @@
                             android:elevation="8dp">
 
                             <ImageView
+                                android:id="@+id/shoppingclick"
                                 android:layout_width="30dp"
                                 android:layout_height="30dp"
                                 android:layout_centerInParent="true"
