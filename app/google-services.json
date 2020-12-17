@@ -1,34 +1,33 @@
 {
   "project_info": {
-    "project_number": "23512772124",
-    "firebase_url": "https://travel-guide-84acd.firebaseio.com",
-    "project_id": "travel-guide-84acd",
-    "storage_bucket": "travel-guide-84acd.appspot.com"
+    "project_number": "938418993612",
+    "project_id": "hungersaviour-a40ff",
+    "storage_bucket": "hungersaviour-a40ff.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:23512772124:android:19a30b8486dab6743b39d9",
+        "mobilesdk_app_id": "1:938418993612:android:f558f57253580446ef4569",
         "android_client_info": {
-          "package_name": "com.example.travelguide"
+          "package_name": "com.example.hungersaviour"
         }
       },
       "oauth_client": [
         {
-          "client_id": "23512772124-as8ddoeqri3rgftbd52an2jloh86s1sg.apps.googleusercontent.com",
+          "client_id": "938418993612-cac0dc8efu45ocb951ok7vp8r7a1kk10.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDEMt3rz8iNwzfSJAghbwT1_7V7WH1xpX0"
+          "current_key": "AIzaSyDvLmO3-Y1WLnD84bjTxrZ7MXWD5Kdpmv0"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "23512772124-as8ddoeqri3rgftbd52an2jloh86s1sg.apps.googleusercontent.com",
+              "client_id": "938418993612-cac0dc8efu45ocb951ok7vp8r7a1kk10.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

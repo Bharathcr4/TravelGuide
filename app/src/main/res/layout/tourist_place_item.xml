@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@drawable/bg7">
+        android:background="@drawable/bgg1">
 
         <TextView
             android:layout_width="wrap_content"
@@ -20,7 +20,7 @@
             android:id="@+id/T_name"
             android:textSize="25sp"
             android:fontFamily="@font/muli_black"
-            android:textColor="@color/Blue"/>
+            android:textColor="@color/black"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -28,6 +28,6 @@
             android:id="@+id/T_location"
             android:textSize="18sp"
             android:fontFamily="@font/muli_black"
-            android:textColor="@color/Blue"/>
+            android:textColor="@color/black"/>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

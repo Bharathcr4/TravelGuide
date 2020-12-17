@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".User.Lodging_main"
-    android:background="@drawable/g1">
+    android:background="@drawable/bg9">
 
     <ImageView
         android:id="@+id/lodge_back_button"

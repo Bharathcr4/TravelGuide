@@ -63,13 +63,17 @@ public class SignUp extends AppCompatActivity {
         sign_up=(Button)findViewById(R.id.signup_button);
 
         sign_up.setOnClickListener(v -> {
-            String full_name1=full_name.getEditText().getText().toString();
-            String user_name1=user_name.getEditText().getText().toString();
-            String user_email1=user_email.getEditText().getText().toString();
-            String user_password1=user_password.getEditText().getText().toString();
-            String user_phone1=user_phone.getEditText().getText().toString();
+            if (!validateFullName() | !validateUserName() | !validatePhoneNumber() | !validateEmail() | !validatePassword()){
+                return;
+            } else {
+                String full_name1 = full_name.getEditText().getText().toString();
+                String user_name1 = user_name.getEditText().getText().toString();
+                String user_email1 = user_email.getEditText().getText().toString();
+                String user_password1 = user_password.getEditText().getText().toString();
+                String user_phone1 = user_phone.getEditText().getText().toString();
 
-            createUser(full_name1,user_name1,user_email1,user_password1,user_phone1);
+                createUser(full_name1, user_name1, user_email1, user_password1, user_phone1);
+            }
         });
         backBtn.setOnClickListener(v ->
 
@@ -134,6 +138,93 @@ public class SignUp extends AppCompatActivity {
                     }
                 });
     }
+    private boolean validateFullName() {
+      String val = full_name.getEditText().getText().toString().trim();
+    if (val.isEmpty()) {
+            full_name.setError("Field cannot be empty");
+            return false;
+        } else {
+            full_name.setError(null);
+            full_name.setErrorEnabled(false);
+            return true;
+
+        }
+    }
+
+    private boolean validateUserName() {
+        String val = user_name.getEditText().getText().toString().trim();
+        String checkspaces = "\\A\\w{1,20}\\z";
+        if (val.isEmpty()) {
+            user_name.setError("Field cannot be empty");
+            return false;
+        } else if (val.length() > 20) {
+            user_name.setError("Username is too Large");
+            return false;
+        } else if (!val.matches(checkspaces)) {
+            user_name.setError("No white Spaces allowed");
+            return false;
+        } else {
+            user_name.setError(null);
+            user_name.setErrorEnabled(false);
+            return true;
+
+        }
+    }
+
+    private boolean validateEmail() {
+        String val = user_email.getEditText().getText().toString().trim();
+        String checkEmail = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+        if (val.isEmpty()) {
+            user_email.setError("Field cannot be empty");
+            return false;
+        } else if (!val.matches(checkEmail)) {
+            user_email.setError("Invalid Email!!");
+            return false;
+        } else {
+            user_email.setError(null);
+            user_email.setErrorEnabled(false);
+            return true;
+
+        }
+    }
+
+    private boolean validatePassword() {
+        String val = user_password.getEditText().getText().toString().trim();
+        String checkPassword = "^" +
+                "(?=.*[0-9])" +         //at least 1 digit
+                "(?=.*[a-z])" +         //at least 1 lower case letter
+                "(?=.*[A-Z])" +         //at least 1 upper case letter
+                "(?=.*[a-zA-Z])" +      //any letter
+                "(?=.*[@#$%^&+=])" +    //at least 1 special character
+                "(?=\\S+$)" +           //no white spaces
+                ".{4,}" +               //at least 4 characters
+                "$";
+
+        if (val.isEmpty()) {
+            user_password.setError("Field can not be empty");
+            return false;
+        } else if (!val.matches(checkPassword)) {
+            user_password.setError("Password should contain special characters,numbers and upper and lowercase!");
+            return false;
+        } else {
+            user_password.setError(null);
+            user_password.setErrorEnabled(false);
+            return true;
+        }
+    }
+
+    private boolean validatePhoneNumber() {
+        String val = user_phone.getEditText().getText().toString().trim();
+        if (val.isEmpty()) {
+            user_phone.setError("Enter valid phone number");
+            return false;
+        } else {
+           user_phone.setError(null);
+            user_phone.setErrorEnabled(false);
+            return true;
+        }
+    }
+
 
     public static FirebaseAuth getFirebaseAuth(){return FirebaseAuth.getInstance();}
 

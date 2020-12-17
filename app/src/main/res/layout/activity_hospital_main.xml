@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".User.Hospital_main"
-    android:background="@drawable/g1">
+    android:background="@drawable/bg9">
 
     <ImageView
         android:id="@+id/hosp_back_button"

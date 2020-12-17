@@ -30,6 +30,7 @@
     <string name="login">LOGIN</string>
     <string name="profile">PROFILE</string>
     <string name="logout">LOGOUT</string>
+    <string name="exit">EXIT</string>
 
     ///Dashboard
     <string name="hotels">Hotels</string>

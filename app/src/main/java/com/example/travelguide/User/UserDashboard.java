@@ -1,14 +1,18 @@
 package com.example.travelguide.User;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
@@ -33,9 +37,10 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
     static final float END_SCALE = 0.7f;
     RecyclerView featuredRecycler;
     RecyclerView.Adapter adapter;
-    ImageView menuIcon,dash_restaurant,dash_lodging,dash_shopping,dash_travel;
+    ImageView menuIcon, dash_restaurant, dash_lodging, dash_shopping, dash_travel;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
+    AlertDialog.Builder builder;
 
     LinearLayout contentView;
 
@@ -46,10 +51,10 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
         setContentView(R.layout.activity_user_dashboard);
         //Hooks
         featuredRecycler = findViewById(R.id.featured_recycler);
-        dash_restaurant=findViewById(R.id.dashboard_rest_icon);
-        dash_shopping=findViewById(R.id.shoppingclick);
-        dash_lodging=findViewById(R.id.lodgingclick);
-        dash_travel=findViewById(R.id.travelclick);
+        dash_restaurant = findViewById(R.id.dashboard_rest_icon);
+        dash_shopping = findViewById(R.id.shoppingclick);
+        dash_lodging = findViewById(R.id.lodgingclick);
+        dash_travel = findViewById(R.id.travelclick);
 
         dash_restaurant.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,7 +101,7 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
 
     }
 
-///Navigation Drawer Functions
+    ///Navigation Drawer Functions
     private void navigationDrawer() {
 
         //Navigation Drawer
@@ -140,12 +145,11 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
     }
 
 
-
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.nav_all_categories:
-                startActivity(new Intent(getApplicationContext(),AllCategories.class));
+                startActivity(new Intent(getApplicationContext(), AllCategories.class));
                 break;
             case R.id.nav_login:
                 startActivity(new Intent(getApplicationContext(), Login.class));
@@ -155,24 +159,27 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
                 break;
 
             case R.id.nav_profile:
-                if (FirebaseAuth.getInstance().getUid() != null){
+                if (FirebaseAuth.getInstance().getUid() != null) {
                     startActivity(new Intent(getApplicationContext(), Profile_main.class));
                     //Toast.makeText(this, "Logout successfully..!!", Toast.LENGTH_SHORT).show();
-                }else {
+                } else {
                     Toast.makeText(this, "Please Login to your account", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(getApplicationContext(), Login.class));
                 }
                 break;
 
             case R.id.nav_logout:
-                if (FirebaseAuth.getInstance().getUid() != null){
+                if (FirebaseAuth.getInstance().getUid() != null) {
                     FirebaseAuth.getInstance().signOut();
                     Toast.makeText(this, "Logout successfully..!!", Toast.LENGTH_SHORT).show();
-                }else {
+                    startActivity(new Intent(getApplicationContext(), Login.class));
+                } else {
                     Toast.makeText(this, "Please Login to your account", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(getApplicationContext(), Login.class));
                 }
                 break;
+            case R.id.nav_exit:
+                onBackPressed();
         }
 
 
@@ -196,10 +203,10 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
     }
 
 
-
-    public void callRetailerScreens(View view){
+    public void callRetailerScreens(View view) {
         startActivity(new Intent(getApplicationContext(), RetailerStartUpScreen.class));
     }
+
     @Override
     public void onBackPressed() {
 
@@ -207,7 +214,29 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
             drawerLayout.closeDrawer(GravityCompat.START);
         } else
             super.onBackPressed();
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Are You Sure you want to exit").setCancelable(false).setPositiveButton("Yes",new DialogInterface.OnClickListener()
+
+        {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+            }
+        })
+                .setNegativeButton("No",new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(UserDashboard.this, "You Clicked on cancel", Toast.LENGTH_LONG).show();
+                    }
+               });
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+        alertDialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(Color.BLACK);
+        alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(Color.BLACK);
+
     }
 }
+
 
 

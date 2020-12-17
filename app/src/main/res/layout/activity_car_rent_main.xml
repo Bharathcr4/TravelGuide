@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".User.Car_rent_main"
-    android:background="@drawable/g1">
+    android:background="@drawable/bg9">
 
     <ImageView
         android:id="@+id/car_rent_back_button"

@@ -18,9 +18,7 @@
         <activity android:name=".User.Hospital_main" />
         <activity android:name=".User.Restaurant_main" />
         <activity android:name=".Common.LoginSignup.Profile_main" />
-        <activity android:name=".User.Profile_main" />
         <activity android:name=".User.Car_rent_main" />
-        <activity android:name=".User.ProfileActivity_main" />
         <activity android:name=".Common.LoginSignup.ForgotPassword" />
         <activity android:name=".Common.LoginSignup.SignUp" />
         <activity android:name=".Common.LoginSignup.Login" />

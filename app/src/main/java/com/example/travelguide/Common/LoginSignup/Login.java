@@ -137,30 +137,27 @@ public class Login extends AppCompatActivity {
         });
     }
 
-    private boolean validateUserName() {
+        private boolean validateUserName() {
         String val = username.getEditText().getText().toString().trim();
-            /*String checkspaces = "\\A\\w{1,50}\\z";
-            if (val.isEmpty()) {
-                username.setError("Field cannot be empty");
-                return false;
-            } else if (val.length() > 20) {
-                username.setError("Username is too Large");
-                return false;
-            } else if (!val.matches(checkspaces)) {
-                username.setError("No white Spaces allowed");
-                return false;
-            } else {
-                username.setError(null);
-                username.setErrorEnabled(false);
-                return true;
+        String checkEmail = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+        if (val.isEmpty()) {
+            username.setError("Field cannot be empty");
+            return false;
+        } else if (!val.matches(checkEmail)) {
+            username.setError("Invalid Email!!");
+            return false;
+        } else {
+            username.setError(null);
+            username.setErrorEnabled(false);
+            return true;
 
-            }*/
-        return true;
+        }
+
     }
 
     private boolean validatePassword() {
         String val = password.getEditText().getText().toString().trim();
-            /*String checkPassword = "^" +
+            String checkPassword = "^" +
                     "(?=.*[0-9])" +         //at least 1 digit
                     "(?=.*[a-z])" +         //at least 1 lower case letter
                     "(?=.*[A-Z])" +         //at least 1 upper case letter
@@ -180,8 +177,7 @@ public class Login extends AppCompatActivity {
                 password.setError(null);
                 password.setErrorEnabled(false);
                 return true;
-            }*/
-        return true;
+            }
     }
 
     public static FirebaseAuth getFirebaseAuth() {

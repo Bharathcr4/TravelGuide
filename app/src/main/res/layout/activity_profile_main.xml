@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/bg1"
+    android:background="@drawable/prfle"
     tools:context=".Common.LoginSignup.Profile_main">
 
     <ImageView
@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="5dp"
-        android:src="@drawable/back_buttn" />
+        android:src="@drawable/profile_back" />
 
 
     <RelativeLayout
@@ -23,30 +23,33 @@
 
         <ImageView
             android:id="@+id/profile_img"
-            android:layout_width="100dp"
+            android:layout_width="130dp"
             android:layout_height="100dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="120dp"
-            android:src="@drawable/user_profile" />
+            android:src="@drawable/user" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
-            android:fontFamily="@font/wendy_one"
+            android:fontFamily="@font/holtwood_one_sc"
             android:text="Travel Guide"
             android:textAllCaps="true"
-            android:textSize="40sp" />
+            android:textColor="@color/Blue"
+            android:textSize="28sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="240dp"
             android:layout_marginLeft="30dp"
-            android:fontFamily="@font/wendy_one"
+            android:layout_marginTop="220dp"
+            android:fontFamily="@font/lora_bold"
             android:text="Profile Details"
             android:textAllCaps="true"
-            android:textSize="20sp" />
+            android:textColor="@color/Blue"
+            android:textStyle="bold"
+            android:textSize="25sp" />
     </RelativeLayout>
 
     <LinearLayout
@@ -63,8 +66,8 @@
             android:layout_marginTop="15sp"
             android:fontFamily="@font/muli_black"
             android:text=""
-            android:textColor="@color/LightWhite"
-            android:textSize="20sp" />
+            android:textColor="@color/Blue"
+            android:textSize="22sp" />
         <TextView
             android:id="@+id/profile_username"
             android:layout_width="wrap_content"
@@ -73,8 +76,8 @@
             android:layout_marginTop="15sp"
             android:fontFamily="@font/muli_black"
             android:text=""
-            android:textColor="@color/LightWhite"
-            android:textSize="20sp" />
+            android:textColor="@color/Blue"
+            android:textSize="22sp" />
 
         <TextView
             android:id="@+id/profile_phonenumber"
@@ -84,8 +87,8 @@
             android:layout_marginTop="15sp"
             android:fontFamily="@font/muli_black"
             android:text=""
-            android:textColor="@color/LightWhite"
-            android:textSize="20sp" />
+            android:textColor="@color/Blue"
+            android:textSize="22sp" />
         <TextView
             android:id="@+id/profile_email"
             android:layout_width="wrap_content"
@@ -94,8 +97,8 @@
             android:layout_marginTop="15sp"
             android:fontFamily="@font/muli_black"
             android:text=""
-            android:textColor="@color/LightWhite"
-            android:textSize="20sp" />
+            android:textColor="@color/Blue"
+            android:textSize="22sp" />
 
 
 

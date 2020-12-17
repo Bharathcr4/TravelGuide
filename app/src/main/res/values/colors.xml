@@ -13,12 +13,15 @@
     <color name="khaki">#F0E68C</color>
    <color name="LightWhite">#F0F0F0</color>
     <color name="Blue">#B0C4DE</color>
+    <color name="silver">#C0C0C0</color>
     <color name="green">#2e8b57</color>
     <color name="grey">	#867979</color>
     <color name="Marron">#800000</color>
     <color name="Wood">#CCCC99</color>
     <color name="orange">#E08062 </color>
+    <color name="sienna">#FFA07A</color>
     <color name="Ghost">#E6E6FA</color>
+    <color name="tan">#FFDEAD</color>
 
 
     //Dashboard Colors
