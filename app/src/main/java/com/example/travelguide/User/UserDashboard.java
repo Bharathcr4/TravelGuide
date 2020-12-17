@@ -216,7 +216,7 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
             super.onBackPressed();
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Are You Sure you want to exit").setCancelable(false).setPositiveButton("Yes",new DialogInterface.OnClickListener()
+        builder.setMessage("Do you want to exit?").setCancelable(false).setPositiveButton("Yes",new DialogInterface.OnClickListener()
 
         {
             @Override
