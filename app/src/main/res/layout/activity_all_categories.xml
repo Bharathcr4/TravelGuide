@@ -25,13 +25,7 @@
                 android:padding="15dp"
                 android:src="@drawable/category_backbuttn" />
 
-            <ImageView
-                android:layout_width="87dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="1dp"
-                android:padding="15dp"
-                android:src="@drawable/search_icon" />
+
 
         </RelativeLayout>
 

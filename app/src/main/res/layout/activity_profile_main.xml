@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/prfle"
+    android:background="@drawable/bg9"
     tools:context=".Common.LoginSignup.Profile_main">
 
     <ImageView
@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="5dp"
-        android:src="@drawable/profile_back" />
+        android:src="@drawable/back_buttn" />
 
 
     <RelativeLayout
@@ -27,7 +27,7 @@
             android:layout_height="100dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="120dp"
-            android:src="@drawable/user" />
+            android:src="@drawable/user_profile" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -36,7 +36,7 @@
             android:fontFamily="@font/holtwood_one_sc"
             android:text="Travel Guide"
             android:textAllCaps="true"
-            android:textColor="@color/Blue"
+            android:textColor="@color/black"
             android:textSize="28sp" />
 
         <TextView
@@ -47,7 +47,7 @@
             android:fontFamily="@font/lora_bold"
             android:text="Profile Details"
             android:textAllCaps="true"
-            android:textColor="@color/Blue"
+            android:textColor="@color/black"
             android:textStyle="bold"
             android:textSize="25sp" />
     </RelativeLayout>
@@ -66,7 +66,7 @@
             android:layout_marginTop="15sp"
             android:fontFamily="@font/muli_black"
             android:text=""
-            android:textColor="@color/Blue"
+            android:textColor="@color/black"
             android:textSize="22sp" />
         <TextView
             android:id="@+id/profile_username"
@@ -76,7 +76,7 @@
             android:layout_marginTop="15sp"
             android:fontFamily="@font/muli_black"
             android:text=""
-            android:textColor="@color/Blue"
+            android:textColor="@color/black"
             android:textSize="22sp" />
 
         <TextView
@@ -87,7 +87,7 @@
             android:layout_marginTop="15sp"
             android:fontFamily="@font/muli_black"
             android:text=""
-            android:textColor="@color/Blue"
+            android:textColor="@color/black"
             android:textSize="22sp" />
         <TextView
             android:id="@+id/profile_email"
@@ -97,7 +97,7 @@
             android:layout_marginTop="15sp"
             android:fontFamily="@font/muli_black"
             android:text=""
-            android:textColor="@color/Blue"
+            android:textColor="@color/black"
             android:textSize="22sp" />
 
 

@@ -1,9 +1,15 @@
 package com.example.travelguide.Common.LoginSignup;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.app.Notification;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -62,6 +68,9 @@ public class Profile_main extends AppCompatActivity {
             }
         });
 
+
+
+
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("users");
 
@@ -92,6 +101,8 @@ public class Profile_main extends AppCompatActivity {
 */
     }
 
+
+
     private user getUserProfile(String email){
 
 
@@ -120,4 +131,5 @@ public class Profile_main extends AppCompatActivity {
 
         return _profile;
     }
+
 }
