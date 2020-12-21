@@ -12,7 +12,7 @@
     <color name="colorAccent">#FFE4B5</color>
     <color name="khaki">#F0E68C</color>
    <color name="LightWhite">#F0F0F0</color>
-    <color name="Blue">#B0C4DE</color>
+    <color name="Blue">#E0FFFF</color>
     <color name="silver">#C0C0C0</color>
     <color name="green">#2e8b57</color>
     <color name="grey">	#867979</color>
@@ -20,8 +20,9 @@
     <color name="Wood">#CCCC99</color>
     <color name="orange">#E08062 </color>
     <color name="sienna">#FFA07A</color>
-    <color name="Ghost">#E6E6FA</color>
+    <color name="Ghost">#F0F8FF</color>
     <color name="tan">#FFDEAD</color>
+    <color name="whitesmoke">#F0F8FF</color>
 
 
     //Dashboard Colors
@@ -38,8 +39,8 @@
     <color name="clr_grey_text_transparent">#696969</color>
 
     //Card colors
-    <color name="card1">#BDB76B</color>
-    <color name="card2">#CD853F</color>
-    <color name="card3">#C0C0C0</color>
-    <color name="card4">#66CDAA</color>
+    <color name="card1">#8FBC8F</color>
+    <color name="card2">#CCCC99</color>
+    <color name="card3">#F08080</color>
+    <color name="card4">#DCDCDC</color>
 </resources>

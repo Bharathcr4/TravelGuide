@@ -37,7 +37,7 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
     static final float END_SCALE = 0.7f;
     RecyclerView featuredRecycler;
     RecyclerView.Adapter adapter;
-    ImageView menuIcon, dash_restaurant, dash_lodging, dash_shopping, dash_travel;
+    ImageView menuIcon, dash_restaurant, dash_lodging, dash_theatre, dash_travel;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     AlertDialog.Builder builder;
@@ -52,7 +52,7 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
         //Hooks
         featuredRecycler = findViewById(R.id.featured_recycler);
         dash_restaurant = findViewById(R.id.dashboard_rest_icon);
-        dash_shopping = findViewById(R.id.shoppingclick);
+        dash_theatre= findViewById(R.id.theatre_click);
         dash_lodging = findViewById(R.id.lodgingclick);
         dash_travel = findViewById(R.id.travelclick);
 
@@ -70,10 +70,10 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
                 startActivity(intent);
             }
         });
-        dash_shopping.setOnClickListener(new View.OnClickListener() {
+        dash_theatre.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Shopping_main.class);
+                Intent intent = new Intent(getApplicationContext(), Theatre_main.class);
                 startActivity(intent);
             }
         });
@@ -124,7 +124,7 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
 
     private void animateNavigationDrawer() {
 
-        drawerLayout.setScrimColor(getResources().getColor(R.color.grey));
+        drawerLayout.setScrimColor(getResources().getColor(R.color.black));
         drawerLayout.addDrawerListener(new DrawerLayout.SimpleDrawerListener() {
                                            @Override
                                            public void onDrawerSlide(View drawerView, float slideOffset) {

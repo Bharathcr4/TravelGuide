@@ -20,7 +20,7 @@
             android:id="@+id/lodge_name"
             android:textSize="25sp"
             android:fontFamily="@font/muli_black"
-            android:textColor="@color/black"/>
+            android:textColor="@color/Blue"/>
 
 
         <TextView
@@ -29,7 +29,7 @@
             android:id="@+id/lodge_phone"
             android:textSize="18sp"
             android:fontFamily="@font/muli_black"
-            android:textColor="@color/black"/>
+            android:textColor="@color/Blue"/>
 
 
         <TextView
@@ -38,7 +38,7 @@
             android:id="@+id/lodge_location"
             android:textSize="18sp"
             android:fontFamily="@font/muli_black"
-            android:textColor="@color/black"/>
+            android:textColor="@color/Blue"/>
 
   </LinearLayout>
 </androidx.cardview.widget.CardView>

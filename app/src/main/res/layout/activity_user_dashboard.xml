@@ -12,7 +12,7 @@
     android:id="@+id/navigation_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/navbg2"
+    android:background="@drawable/navbg1"
     android:theme="@style/navigation_theme"
     android:layout_gravity="start"
     app:headerLayout="@layout/menu_header"
@@ -22,7 +22,7 @@
         android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/b1"
+        android:background="@drawable/main_home"
         android:orientation="vertical">
 
 
@@ -112,6 +112,8 @@
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
                             android:text="@string/restaurants"
+                            android:textColor="@color/Ghost"
+                            android:fontFamily="@font/muli_black"
                             android:textAlignment="center" />
 
                     </LinearLayout>
@@ -142,6 +144,8 @@
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
                             android:text="Lodging"
+                            android:textColor="@color/Ghost"
+                            android:fontFamily="@font/muli_black"
                             android:textAlignment="center" />
 
                     </LinearLayout>
@@ -171,6 +175,8 @@
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
                             android:text="@string/tourist_place"
+                            android:textColor="@color/Ghost"
+                            android:fontFamily="@font/muli_black"
                             android:textAlignment="center" />
 
                     </LinearLayout>
@@ -188,18 +194,20 @@
                             android:elevation="8dp">
 
                             <ImageView
-                                android:id="@+id/shoppingclick"
+                                android:id="@+id/theatre_click"
                                 android:layout_width="30dp"
                                 android:layout_height="30dp"
                                 android:layout_centerInParent="true"
-                                android:src="@drawable/shop_icon" />
+                                android:src="@drawable/cinema" />
                         </RelativeLayout>
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
-                            android:text="@string/shops"
+                            android:text="@string/theatre"
+                            android:textColor="@color/Ghost"
+                            android:fontFamily="@font/muli_black"
                             android:textAlignment="center" />
 
                     </LinearLayout>

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".User.Restaurant_main"
-    android:background="@drawable/b3">
+    android:background="@drawable/main_home">
 
     <ImageView
         android:id="@+id/restaurant_back_button"
@@ -19,7 +19,7 @@
         android:layout_width="320dp"
         android:layout_height="200dp"
         android:layout_gravity="center"
-        android:src="@drawable/restaurant1" />
+        android:src="@drawable/restaurant_image" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

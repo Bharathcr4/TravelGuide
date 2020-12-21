@@ -9,10 +9,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.example.travelguide.HelperClasses.FetchData_Tourist_place;
+import com.example.travelguide.HelperClasses.FetchData_restaurant;
 import com.example.travelguide.HelperClasses.FetchData_shopping;
-import com.example.travelguide.HelperClasses.HomeAdapter.HelperAdapter_Tourist_place;
+import com.example.travelguide.HelperClasses.FetchData_theatre;
+import com.example.travelguide.HelperClasses.HomeAdapter.HelperAdapter_restaurant;
 import com.example.travelguide.HelperClasses.HomeAdapter.HelperAdapter_shopping;
+import com.example.travelguide.HelperClasses.HomeAdapter.HelperAdapter_theatre;
 import com.example.travelguide.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -23,33 +25,33 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Tourist_place_main extends AppCompatActivity {
-    List<FetchData_Tourist_place> fetchData_Tourist_place;
+public class Theatre_main extends AppCompatActivity {
+    List<FetchData_theatre> fetchData_theatre;
     RecyclerView recyclerView;
-    ImageView tourist;
-    HelperAdapter_Tourist_place helperAdapter_Tourist_place;
+    ImageView theatre;
+    HelperAdapter_theatre helperAdapter_theatre;
     DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tourist_place_main);
-        recyclerView = findViewById(R.id.recycler_tourist);
-        tourist = findViewById(R.id.tourist_back_button);
+        setContentView(R.layout.activity_theatre_main);
+        recyclerView = findViewById(R.id.recycler_theatre);
+       theatre = findViewById(R.id.theatre_back_button);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        fetchData_Tourist_place = new ArrayList<>();
+        fetchData_theatre= new ArrayList<>();
 
-        databaseReference = FirebaseDatabase.getInstance().getReference("Tourist_places");
+        databaseReference = FirebaseDatabase.getInstance().getReference("Theatres");
 
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot ds : snapshot.getChildren()) {
-                    FetchData_Tourist_place data_Tourist_place = ds.getValue(FetchData_Tourist_place.class);
-                    fetchData_Tourist_place.add(data_Tourist_place);
+                    FetchData_theatre data_theatre = ds.getValue(FetchData_theatre.class);
+                    fetchData_theatre.add(data_theatre);
                 }
-                helperAdapter_Tourist_place = new HelperAdapter_Tourist_place(fetchData_Tourist_place);
-                recyclerView.setAdapter(helperAdapter_Tourist_place);
+                helperAdapter_theatre = new HelperAdapter_theatre(fetchData_theatre);
+                recyclerView.setAdapter(helperAdapter_theatre);
             }
 
             @Override
@@ -57,10 +59,10 @@ public class Tourist_place_main extends AppCompatActivity {
 
             }
         });
-        tourist.setOnClickListener(new View.OnClickListener() {
+        theatre.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               Tourist_place_main.super.onBackPressed();
+                Theatre_main.super.onBackPressed();
             }
         });
     }

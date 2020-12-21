@@ -20,7 +20,7 @@
         android:id="@+id/cname_one"
         android:textSize="25sp"
         android:fontFamily="@font/muli_black"
-        android:textColor="@color/black"/>
+        android:textColor="@color/Blue"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -28,7 +28,7 @@
             android:id="@+id/download_link"
             android:textSize="18sp"
             android:fontFamily="@font/muli_black"
-            android:textColor="@color/black"/>
+            android:textColor="@color/Blue"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -36,7 +36,7 @@
             android:id="@+id/location_one"
             android:textSize="18sp"
             android:fontFamily="@font/muli_black"
-            android:textColor="@color/black"/>
+            android:textColor="@color/Blue"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -44,7 +44,7 @@
             android:id="@+id/phonenum_one"
             android:textSize="18sp"
             android:fontFamily="@font/muli_black"
-            android:textColor="@color/black"/>
+            android:textColor="@color/Blue"/>
 
 </LinearLayout>
 </androidx.cardview.widget.CardView>
