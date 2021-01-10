@@ -12,7 +12,7 @@
     android:id="@+id/navigation_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/navbg1"
+    android:background="@drawable/nvbgg"
     android:theme="@style/navigation_theme"
     android:layout_gravity="start"
     app:headerLayout="@layout/menu_header"
@@ -38,7 +38,7 @@
                 android:layout_centerVertical="true"
                 android:layout_margin="8dp"
                 android:elevation="6dp"
-                android:src="@drawable/menu" />
+                android:src="@drawable/menu"/>
 
             <ImageView
                 android:id="@+id/login_signup"
@@ -73,7 +73,7 @@
                         android:layout_centerHorizontal="true"
                         android:fontFamily="@font/crimson_text_bold"
                         android:text="@string/logo_name"
-                        android:textColor="@color/black"
+                        android:textColor="@color/Blue"
                         android:textSize="30sp"
                         android:textStyle="bold" />
 
@@ -220,7 +220,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="20dp"
-                    android:background="@color/banner_background_light">
+                    android:background="@drawable/main_home">
 
                     <LinearLayout
                         android:id="@+id/featured_background"
@@ -232,7 +232,7 @@
                         android:layout_marginEnd="10dp"
                         android:layout_marginRight="10dp"
                         android:layout_marginBottom="10dp"
-                        android:background="@color/banner_background"
+                        android:background="#FFFAF0"
                         android:orientation="vertical">
 
                         <TextView
@@ -243,6 +243,7 @@
                             android:layout_marginTop="50dp"
                             android:text="@string/featured_locations"
                             android:textAllCaps="true"
+                            android:fontFamily="@font/muli_black"
                             android:textColor="@color/black"
                             android:textSize="24dp" />
 
@@ -250,6 +251,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
                             android:text="@string/featured_locations_description" />
 
 
@@ -260,7 +263,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="350dp"
                         android:layout_toRightOf="@id/featured_background"
-                        android:background="@color/home_background" />
+                        android:background="@drawable/main_home" />
                 </RelativeLayout>
 
 

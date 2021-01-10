@@ -1,5 +1,6 @@
 package com.example.travelguide.HelperClasses.HomeAdapter;
 
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,8 +11,11 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.travelguide.R;
+import com.google.firebase.database.collection.LLRBNode;
 
 import java.util.ArrayList;
+
+import static android.graphics.Color.BLACK;
 
 public class FeaturedAdapter extends RecyclerView.Adapter<FeaturedAdapter.FeaturedViewHolder> {
 ArrayList<FeaturedHelperClass>featuredLocations;
@@ -34,6 +38,7 @@ public FeaturedAdapter(ArrayList<FeaturedHelperClass>featuredLocations){
         holder.image.setImageResource(featuredHelperClass.getImage());
         holder.title.setText(featuredHelperClass.getTitle());
         holder.desc.setText(featuredHelperClass.getDescription());
+        holder.desc.setTextColor(BLACK);
 
     }
 

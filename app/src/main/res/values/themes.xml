@@ -17,7 +17,7 @@
 
     //menu style
     <style name="navigation_theme">
-        <item name="colorPrimary">@color/green</item>
-        <item name="colorControlHighlight">@color/black</item>
+        <item name="colorPrimary">@color/tan</item>
+        <item name="colorControlHighlight">@color/grey</item>
     </style>
 </resources>

@@ -124,7 +124,7 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
 
     private void animateNavigationDrawer() {
 
-        drawerLayout.setScrimColor(getResources().getColor(R.color.black));
+        drawerLayout.setScrimColor(getResources().getColor(R.color.whitesmoke));
         drawerLayout.addDrawerListener(new DrawerLayout.SimpleDrawerListener() {
                                            @Override
                                            public void onDrawerSlide(View drawerView, float slideOffset) {
@@ -201,6 +201,9 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
 
 
     }
+
+
+
 
 
     public void callRetailerScreens(View view) {

@@ -5,16 +5,16 @@
     <string name="s1logo_name"> Welcome to Travel Guide</string>
     //Strings for onboarding screen
     //Titles
-    <string name="first_slide_title">Search Your Location</string>
+    <string name="first_slide_title">About Places</string>
     <string name="second_slide_title">Make a Call</string>
-    <string name="third_slide_title">Add Missing Place</string>
+    <string name="third_slide_title">Find Top Places</string>
     <string name="fourth_slide_title">Sit Back and Enjoy</string>
 
     //Description
-    <string name="first_slide_desc">You can search any place nearby or with-in the specified city.We will display specific or all related shops to match your search</string>
-    <string name="second_slide_desc">We provide numbers of almost  all the departments and shops registered with us.You can perform Bookings as well</string>
-    <string name="third_slide_desc"> You can search any place nearby or with in the specified city.We will display specific or all related shops to match your search</string>
-    <string name="fourth_slide_desc">We will handle everything for you.As you have the app in your pocket then you dont have to worry for anything</string>
+    <string name="first_slide_desc">You can get information about the required places  with-in the specified city.We will display the information about the places. </string>
+    <string name="second_slide_desc">We provide numbers of almost  all the departments and shops with top demand in city.</string>
+    <string name="third_slide_desc"> You will get the details about top places in the city.We will display specific or all related shops that are demand in city.</string>
+    <string name="fourth_slide_desc">As you have the app in your pocket then you dont have to worry for anything.You can get the desired locations easily</string>
 
     //Buttons
     <string name="skip_btn">Skip</string>
@@ -60,8 +60,8 @@
 
 
     <string name="sign_up">Sign Up</string>
-    <string name="retailer_heading">Grow <br>Your Business</br></string>
-    <string name="retailer_tag_line">We will help you to grow your business using online services!</string>
+    <string name="retailer_heading">Your <br>City Our Guide</br></string>
+    <string name="retailer_tag_line">We will provide you with all the information about city.</string>
     <string name="create_account">Create <br> Account</br></string>
     <string name="how_we_work">How we work?</string>
     <string name="remember_me">Remember Me</string>

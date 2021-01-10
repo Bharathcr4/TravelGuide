@@ -41,7 +41,7 @@ public class SliderAdapter extends PagerAdapter {
             R.string.first_slide_desc,
             R.string.second_slide_desc,
             R.string.third_slide_desc,
-            R.string.first_slide_desc,
+            R.string.fourth_slide_desc,
     };
 
     @Override

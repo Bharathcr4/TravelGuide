@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TravelGuide"
         android:usesCleartextTraffic="true">
-        <activity android:name=".User.Theatre_main"></activity>
+        <activity android:name=".User.Theatre_main" />
         <activity android:name=".User.Tourist_place_main" />
         <activity android:name=".User.Shopping_main" />
         <activity android:name=".User.Lodging_main" />

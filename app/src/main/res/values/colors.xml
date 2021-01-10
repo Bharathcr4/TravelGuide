@@ -7,7 +7,7 @@
     <color name="IndianRed">#CD5C5C</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="colorPrimary">	#2e8b57</color>
+    <color name="colorPrimary">	#ADD8E6</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#FFE4B5</color>
     <color name="khaki">#F0E68C</color>
@@ -21,8 +21,8 @@
     <color name="orange">#E08062 </color>
     <color name="sienna">#FFA07A</color>
     <color name="Ghost">#F0F8FF</color>
-    <color name="tan">#FFDEAD</color>
-    <color name="whitesmoke">#F0F8FF</color>
+    <color name="tan">#cd853f</color>
+    <color name="whitesmoke">#F0FFF0</color>
 
 
     //Dashboard Colors

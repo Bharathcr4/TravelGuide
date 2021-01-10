@@ -35,7 +35,7 @@
             android:fontFamily="@font/crimson_text"
             android:text="Categories"
             android:textStyle="bold"
-            android:textColor="@color/black"
+            android:textColor="@color/Blue"
             android:textSize="20sp"
             android:padding="10dp"
             android:textAllCaps="true"/>

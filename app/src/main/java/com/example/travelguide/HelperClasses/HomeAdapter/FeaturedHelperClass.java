@@ -1,5 +1,7 @@
 package com.example.travelguide.HelperClasses.HomeAdapter;
 
+import android.graphics.Color;
+
 public class FeaturedHelperClass {
 
     int image;
